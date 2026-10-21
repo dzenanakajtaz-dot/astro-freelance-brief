@@ -1,6 +1,6 @@
-# Freelance Brief
+# Astro Freelance Brief Form with Mailtrap Email API
 
-Collect a short project brief. This small application demonstrates **Schema validation and server endpoints** with Astro.
+Collect a short project brief. This small application demonstrates **Schema validation and server endpoints** with Astro. Each submitted brief is emailed to the freelancer through the Mailtrap Email API with native `fetch`, and captured in Mailtrap Email Sandbox during development.
 
 ## What it does
 
@@ -14,6 +14,7 @@ The email workflow: email the submitted brief to the freelancer.
 - TypeScript
 - Node.js 24 and its built-in SQLite module for local persistence
 - Zod for input validation
+- Mailtrap Email API for email delivery
 
 ## Run locally
 
@@ -54,8 +55,6 @@ Example form values:
 }
 ```
 
-
-
 ## Configuration
 
 | Variable | Meaning |
@@ -68,7 +67,7 @@ Example form values:
 | `HOST`, `PORT` | Production listener settings where supported by the framework |
 | `MAIL_MODE` | `sandbox`, `production`, or local-only `log` |
 
-Email credential variables are documented in [email setup](docs/email-setup.md). Frameworks must be restarted after environment changes. Customize the app's public copy, fields, seeded event details, or menu in `src/core/config.js`; Nuxt also uses `app-definition.json` for its client-visible definition. Keep those two definitions consistent when editing.
+Email credential variables are documented in [email setup](docs/email-setup.md). Frameworks must be restarted after environment changes. Customize the app's public copy, fields, seeded event details, or menu in `src/core/config.js`.
 
 ## Where the main idea lives
 
